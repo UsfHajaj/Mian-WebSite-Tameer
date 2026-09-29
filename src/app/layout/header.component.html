@@ -1,0 +1,70 @@
+<header id="mainHeader" class="site-header">
+  <div class="logo-strip">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo-block">
+        <img src="/images/logo1-ministry.png" alt="وزارة الإسكان" height="58">
+      </div>
+      <div class="logo-block">
+        <img src="/images/Gemini_Generated_Image_hhebt1hhebt1hheb-removebg-preview.png" alt="التعمير لإدارة المرافق" height="58">
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" dir="rtl">
+    <div class="container">
+      <a class="navbar-brand fw-bold" routerLink="/">التعمير لإدارة المرافق</a>
+      <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-controls="navbarNav" aria-label="تبديل التنقل">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" [class.show]="menuOpen()">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-lg-start">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" data-nav="index">الرئيسية</a>
+          </li>
+
+          <li class="nav-item dropdown" [class.is-open]="openMenu() === 'about'" [class.mobile-active]="openMenu() === 'about'">
+            <a class="nav-link dropdown-toggle" routerLink="/about" data-nav="about" [class.active]="groupActive(aboutPaths)" aria-haspopup="true" [attr.aria-expanded]="openMenu() === 'about'" (click)="onDropdown($event, 'about')">عن الشركة</a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" routerLink="/about" routerLinkActive="active">نبذة عن الشركة</a></li>
+              <li><hr class="dropdown-divider"></li>
+              @for (link of aboutLinks.slice(1); track link.path) {
+                <li><a class="dropdown-item" [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a></li>
+              }
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown" [class.is-open]="openMenu() === 'services'" [class.mobile-active]="openMenu() === 'services'">
+            <a class="nav-link dropdown-toggle" routerLink="/services" data-nav="services" [class.active]="groupActive(servicePaths)" aria-haspopup="true" [attr.aria-expanded]="openMenu() === 'services'" (click)="onDropdown($event, 'services')">الخدمات</a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              @for (link of serviceLinks; track link.path) {
+                <li><a class="dropdown-item" [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a></li>
+              }
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown" [class.is-open]="openMenu() === 'projects'" [class.mobile-active]="openMenu() === 'projects'">
+            <a class="nav-link dropdown-toggle" routerLink="/project" data-nav="projects" [class.active]="groupActive(projectPaths)" aria-haspopup="true" [attr.aria-expanded]="openMenu() === 'projects'" (click)="onDropdown($event, 'projects')">المشروعات</a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              @for (link of projectLinks; track link.path) {
+                <li><a class="dropdown-item" [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a></li>
+              }
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/protocol-tameer-ahly-misr" routerLinkActive="active" data-nav="news">البروتوكول الاستراتيجي</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/previous_works" routerLinkActive="active" data-nav="previous">سابقة الأعمال</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/careers" routerLinkActive="active" data-nav="careers">الوظائف المتاحة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/communication-complaints" routerLinkActive="active" data-nav="contact">التواصل والشكاوى</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

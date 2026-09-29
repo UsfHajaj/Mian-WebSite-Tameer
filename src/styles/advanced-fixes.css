@@ -1,0 +1,175 @@
+/* إصلاحات متقدمة للأخطاء الشائعة */
+
+/* منع overflow في المحتوى */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* إصلاح مشاكل الصور المكسورة */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[src=""], img:not([src]) {
+  opacity: 0;
+}
+
+/* إصلاح مشاكل النصوص الطويلة */
+.text-break {
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* إصلاح مشاكل التنقل */
+.navbar-nav .nav-link {
+  white-space: nowrap;
+}
+
+/* إصلاح مشاكل الكاروسيل */
+.carousel-item {
+  min-height: 200px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* إصلاح مشاكل الفوتر */
+footer {
+  clear: both;
+  margin-top: auto;
+}
+
+/* إصلاح مشاكل الأزرار */
+.btn {
+  border: none;
+  outline: none;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* إصلاح مشاكل النماذج */
+.form-control:invalid {
+  border-color: #dc3545;
+}
+
+.form-control:valid {
+  border-color: #198754;
+}
+
+/* إصلاح مشاكل الجداول على الهواتف */
+@media (max-width: 768px) {
+  .table-responsive {
+    border: none;
+  }
+  
+  table {
+    font-size: 14px;
+  }
+}
+
+/* إصلاح مشاكل الطباعة */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* إصلاح مشاكل الوصولية */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* إصلاح مشاكل التركيز */
+*:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+}
+
+/* إصلاح مشاكل البحث */
+.search-highlight {
+  background-color: yellow;
+  padding: 0 2px;
+}
+
+/* إصلاح مشاكل التحميل */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #0d6efd;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* إصلاح مشاكل الرسائل */
+.alert {
+  border: none;
+  border-radius: 8px;
+}
+
+.alert-dismissible .btn-close {
+  padding: 0.75rem;
+}
+
+/* إصلاح مشاكل التخطيط المرن */
+.d-flex-safe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* إصلاح مشاكل الظلال */
+.shadow-fix {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* إصلاح مشاكل الانتقالات */
+.transition-fix {
+  transition: all 0.3s ease;
+}
+
+.transition-fix:hover {
+  transform: translateY(-2px);
+}

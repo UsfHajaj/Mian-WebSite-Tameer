@@ -1,0 +1,222 @@
+<section class="jb-hero">
+  <div class="container">
+    <div class="jb-hero__text">
+      <span class="jb-hero__tag"><i class="fas fa-briefcase"></i> التوظيف</span>
+      <h1>الوظائف المتاحة</h1>
+      <p>ابحث عن الوظيفة المناسبة لك في التعمير لإدارة المرافق وقدّم عبر نموذج التقديم.</p>
+    </div>
+    <form class="jb-search" role="search" (submit)="$event.preventDefault()">
+      <i class="fas fa-search" aria-hidden="true"></i>
+      <input id="jobSearch" type="search" placeholder="اكتب اسم الوظيفة" aria-label="ابحث عن وظيفة">
+      <button type="submit">بحث</button>
+    </form>
+    <ul class="jb-stats">
+      <li><strong>17</strong><span>وظيفة متاحة</span></li>
+      <li><strong>4</strong><span>تخصصات</span></li>
+      <li><strong><i class="fas fa-file-signature"></i></strong><span>التقديم عبر نموذج التقديم</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="jb-board">
+  <div class="container jb-layout">
+    <aside class="jb-side">
+      <div class="jb-panel">
+        <h2>التخصص</h2>
+        <div class="jb-filters" id="jobFilters">
+          <button type="button" class="is-on" data-filter="all"><span>كل الوظائف</span><b>17</b></button>
+          <button type="button" data-filter="هندسة"><span><i class="fas fa-helmet-safety"></i>هندسة</span><b>1</b></button>
+          <button type="button" data-filter="إدارة"><span><i class="fas fa-briefcase"></i>إدارة</span><b>11</b></button>
+          <button type="button" data-filter="ميداني"><span><i class="fas fa-clipboard-list"></i>ميداني</span><b>1</b></button>
+          <button type="button" data-filter="فني"><span><i class="fas fa-screwdriver-wrench"></i>فني</span><b>4</b></button>
+        </div>
+      </div>
+      <div class="jb-panel jb-steps">
+        <h2>خطوات التقديم</h2>
+        <ol>
+          <li>اختر الوظيفة المناسبة</li>
+          <li>اضغط «قدّم الآن»</li>
+          <li>أكمل بياناتك عبر نموذج التقديم</li>
+        </ol>
+      </div>
+    </aside>
+
+    <div class="jb-main">
+      <div class="jb-main__head">
+        <h2 id="jobCount"></h2>
+      </div>
+      <div class="jb-list" id="openings">
+      <article class="jb-job" data-group="هندسة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>مهندس موقع</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-helmet-safety"></i>هندسة</span><span><i class="far fa-clock"></i>دوام كامل</span><span><i class="fas fa-location-dot"></i>المواقع</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>أخصائي عطاءات وعقود</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>عقود</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>أخصائي مشتريات</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>مشتريات</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>أخصائي مخازن</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>مخازن</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>أخصائي محاسبة</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>مالية</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>أخصائي تسويق إلكتروني</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>تسويق</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>أخصائي تطوير مؤسسي</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>تطوير</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>أخصائي أرشيف إلكتروني</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>أرشيف</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>أخصائي شئون إدارية</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>شئون إدارية</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>أخصائي موارد بشرية</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>موارد بشرية</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>كاتب</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>إداري</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="إدارة">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>سكرتارية</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-briefcase"></i>إدارة</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          <div class="jb-job__tags"><span>إداري</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="ميداني">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>مشرف موقع تنفيذي</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-clipboard-list"></i>ميداني</span><span><i class="far fa-clock"></i>دوام كامل</span></div>
+          
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="فني">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>فني سباكة</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-screwdriver-wrench"></i>فني</span><span><i class="fas fa-location-dot"></i>المواقع</span></div>
+          
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="فني">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>فني كهرباء</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-screwdriver-wrench"></i>فني</span><span><i class="fas fa-location-dot"></i>المواقع</span></div>
+          
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="فني">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>حرفي سباكة</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-screwdriver-wrench"></i>فني</span><span><i class="fas fa-location-dot"></i>المواقع</span></div>
+          <div class="jb-job__tags"><span>حرفي</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      <article class="jb-job" data-group="فني">
+        <img class="jb-job__logo" src="/images/company-logo-header.jpeg" alt="" loading="lazy">
+        <div class="jb-job__body">
+          <h3>حرفي كهرباء</h3>
+          <p class="jb-job__company">التعمير لإدارة المرافق</p>
+          <div class="jb-job__meta"><span><i class="fas fa-screwdriver-wrench"></i>فني</span><span><i class="fas fa-location-dot"></i>المواقع</span></div>
+          <div class="jb-job__tags"><span>حرفي</span></div>
+        </div>
+        <a class="jb-job__apply" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXHCoho_N91C-ZDDtJ-d7-JbacHMMPLrtpRtHlRNj5_h0vw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">قدّم الآن <i class="fas fa-arrow-left"></i></a>
+      </article>
+      </div>
+      <p class="jb-empty" id="jobEmpty" hidden>لا توجد وظائف مطابقة للبحث.</p>
+    </div>
+  </div>
+</section>

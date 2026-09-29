@@ -1,0 +1,45 @@
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
+Options -Indexes
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  <FilesMatch "\.(html|htm)$">
+    Header set Content-Type "text/html; charset=UTF-8"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|mjs|woff2|webp|jpg|jpeg|png|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html .htm .css .js .xml .txt
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^favicon\.ico$ /images/favicon.jpeg [L]
+  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteRule ^general_cleaning_roads(\.html)?$ /road_maintenance [R=301,L]
+  RewriteRule ^road_cleaning_maintenance(\.html)?$ /road_maintenance [R=301,L]
+  RewriteRule ^([A-Za-z0-9_-]+)\.html$ /$1 [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+</IfModule>

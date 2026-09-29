@@ -1,0 +1,89 @@
+/* ملف CSS خاص بصفحة المعدات المملوكة */
+
+/* صور بديلة للمعدات */
+.equipment-card img[src*="cleaning-equipment.jpg"] {
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    background-size: cover;
+    position: relative;
+}
+
+.equipment-card img[src*="maintenance-equipment.jpg"] {
+    background: linear-gradient(135deg, #FF9800, #FF5722);
+    background-size: cover;
+    position: relative;
+}
+
+.equipment-card img[src*="garden-equipment.jpg"] {
+    background: linear-gradient(135deg, #8BC34A, #4CAF50);
+    background-size: cover;
+    position: relative;
+}
+
+.equipment-card img[src*="security-equipment.jpg"] {
+    background: linear-gradient(135deg, #607D8B, #2196F3);
+    background-size: cover;
+    position: relative;
+}
+
+.equipment-card img[src*="transport-equipment.jpg"] {
+    background: linear-gradient(135deg, #9C27B0, #E91E63);
+    background-size: cover;
+    position: relative;
+}
+
+.equipment-card img[src*="specialized-equipment.jpg"] {
+    background: linear-gradient(135deg, #FFC107, #FF9800);
+    background-size: cover;
+    position: relative;
+}
+
+/* تأثيرات إضافية */
+.equipment-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.equipment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 34, 68, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.equipment-card:hover::before {
+    opacity: 1;
+}
+
+/* تحسين التأثيرات البصرية */
+.equipment-category {
+    position: relative;
+    z-index: 2;
+}
+
+.equipment-card-body {
+    position: relative;
+    z-index: 2;
+}
+
+/* استجابة للهواتف */
+@media (max-width: 768px) {
+    .equipment-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .equipment-card img {
+        height: 200px;
+    }
+    
+    .equipment-card-body {
+        padding: 15px;
+    }
+}

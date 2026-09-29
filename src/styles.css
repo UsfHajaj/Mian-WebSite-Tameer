@@ -1,0 +1,37 @@
+@import './styles/site.css';
+
+app-root,
+app-header,
+app-footer,
+app-inner-layout {
+  display: block;
+}
+
+app-root > :not(router-outlet),
+app-inner-layout > :not(router-outlet) {
+  display: block;
+}
+
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible,
+.btn:focus,
+.btn:focus-visible,
+.nav-link:focus,
+.nav-link:focus-visible,
+.dropdown-item:focus,
+.dropdown-item:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+@media (scripting: none) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

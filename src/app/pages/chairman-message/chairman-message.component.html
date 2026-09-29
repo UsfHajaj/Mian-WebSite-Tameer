@@ -1,0 +1,83 @@
+<!-- PAGE HERO -->
+<div class="page-hero-inner">
+  <div class="page-hero-orb"></div>
+  <div class="container">
+    <div class="page-hero-badge"><i class="fas fa-user-tie"></i> عن الشركة</div>
+    <h1 class="page-hero-title">الدكتور حسن الشوربجي</h1>
+    <p class="page-hero-sub">رئيس مجلس إدارة التعمير لإدارة المرافق — رؤية قيادة شركة التعمير نحو التميز والاستدامة</p>
+  </div>
+</div>
+<div class="page-spacer"></div>
+
+<section class="content-pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><i class="fas fa-comments"></i> رسالة القيادة</div>
+      <h2>رؤية قادة التعمير لإدارة المرافق</h2>
+      <p style="color:#6B7280;max-width:720px;margin:12px auto 0;line-height:1.8">كلمة الدكتور حسن الشوربجي رئيس مجلس إدارة شركة التعمير، والمهندس صلاح حسن السيد، والمحاسب عبدالله رشدي.</p>
+    </div>
+
+    <ul class="nav lead-tabs reveal" id="leadershipTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" [class.active]="tab() === 'chairman'" id="chairman-tab" type="button" role="tab" (click)="select('chairman')">رئيس مجلس الإدارة</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" [class.active]="tab() === 'financial'" id="financial-tab" type="button" role="tab" (click)="select('financial')">شئون مالية وإدارية</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" [class.active]="tab() === 'executive'" id="executive-tab" type="button" role="tab" (click)="select('executive')">شئون تنفيذية</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="leadershipTabsContent">
+      <div class="tab-pane fade" id="chairman-content" role="tabpanel" [class.show]="tab() === 'chairman'" [class.active]="tab() === 'chairman'">
+        <div class="lead-pane reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-md-5">
+              <img loading="lazy" src="/images/dr_shorbagy.png" alt="الدكتور حسن الشوربجي رئيس مجلس إدارة التعمير">
+              <div class="lead-name"><span>رئيس مجلس الإدارة — التعمير لإدارة المرافق</span><strong>د. حسن الشوربجي</strong></div>
+            </div>
+            <div class="col-md-7">
+              <p style="color:#6B7280;line-height:1.9;text-align:justify">في عالم تتسارع فيه وتيرة التنمية العمرانية، أصبحت إدارة المرافق عنصراً حاسماً في نجاح واستدامة المشروعات. هذه رؤية الدكتور حسن الشوربجي، رئيس مجلس إدارة التعمير لإدارة المرافق.</p>
+              <p style="color:#6B7280;line-height:1.9;text-align:justify">في التعمير لإدارة المرافق، لا نقدم خدمات تقليدية، بل نقدم حلولاً متكاملة تعظم قيمة الأصول، ترفع كفاءة التشغيل، وتحقق أعلى عائد استثماري لعملائنا. نلتزم بتقديم مستوى أداء احترافي يعتمد على الخبرة والتكنولوجيا وسرعة التنفيذ، لنكون دائماً الشريك الموثوق للمطورين والجهات الكبرى.</p>
+              <p style="color:#1B3A2D;font-weight:800;margin-top:16px">هدفنا واضح:</p>
+              <div class="lead-checks">✓ تشغيل أكثر كفاءة<br>✓ تكلفة أقل<br>✓ قيمة أعلى</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="financial-content" role="tabpanel" [class.show]="tab() === 'financial'" [class.active]="tab() === 'financial'">
+        <div class="lead-pane">
+          <div class="row align-items-center g-4">
+            <div class="col-md-5">
+              <img loading="lazy" src="/images/eng_abdallah.png" alt="عبدالله رشدي">
+              <div class="lead-name"><span>العضو المنتدب — شئون مالية وإدارية</span><strong>عبدالله رشدي عبدالله</strong></div>
+            </div>
+            <div class="col-md-7">
+              <p style="color:#6B7280;line-height:1.9;text-align:justify">أصبح العقار ثروة يحاول من يملكها الحفاظ عليها لما لها من قيمة تزداد بوتيرة سريعة.</p>
+              <p style="color:#6B7280;line-height:1.9;text-align:justify">ومن هنا جاءت فكرة إنشاء شركة تقوم بالحفاظ على هذه الثروة وصيانة وإدارة المرافق هي شركة التعمير لإدارة المرافق لما لها من خبرة كبيرة ومتميزة في هذا المجال.</p>
+              <p style="color:#1B3A2D;font-weight:800;margin-top:16px">أولويتنا:</p>
+              <div class="lead-checks">✓ الشفافية المالية<br>✓ الكفاءة الإدارية<br>✓ النمو المستدام</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="executive-content" role="tabpanel" [class.show]="tab() === 'executive'" [class.active]="tab() === 'executive'">
+        <div class="lead-pane">
+          <div class="row align-items-center g-4">
+            <div class="col-md-5">
+              <img loading="lazy" src="/images/ceo.png" alt="م. صلاح حسن">
+              <div class="lead-name"><span>العضو المنتدب — شئون التنفيذ والتشغيل</span><strong>م. صلاح حسن</strong></div>
+            </div>
+            <div class="col-md-7">
+              <p style="color:#6B7280;line-height:1.9;text-align:justify">في إطار سياسة الدولة ممثلة في وزارة الإسكان للحفاظ على الثروة العقارية وإطالة العمر الافتراضي للعمارات في المشروعات الإسكانية الضخمة، تم تأسيس شركة التعمير والتي قامت بدورها على أكمل وجه في هذا المجال ضمن أنشطة عديدة للشركة.</p>
+              <p style="color:#6B7280;line-height:1.9;text-align:justify">نعمل حالياً على الاستفادة من خبراتنا في كافة المجالات على أسس علمية وفنية وتكنولوجية بما يواكب التطوير الجاري في كافة الأنشطة والمشروعات الحكومية والخاصة.</p>
+              <p style="color:#1B3A2D;font-weight:800;margin-top:16px">تركيزنا:</p>
+              <div class="lead-checks">✓ الجودة العالية<br>✓ التنفيذ السريع<br>✓ رضا العملاء</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
