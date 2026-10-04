@@ -1,0 +1,72 @@
+export interface Place {
+  name: string;
+  img: string;
+}
+
+export const homeServices = [
+  { path: '/project', img: '/images/Gemini_Generated_Image_7dmd5c7dmd5c7dmd.jpg', title: 'إدارة وتشغيل وصيانة المشروعات السكنية', text: 'تشغيل وصيانة المجتمعات السكنية ومتابعة المرافق والخدمات اليومية بكفاءة.' },
+  { path: '/green_area_maintenance', img: '/images/image27-e1627925268524-768x901.jpg', title: 'إدارة الحدائق والنوادي', text: 'العناية بالحدائق والنوادي والمساحات الرياضية وتحسين البيئة المحيطة.' },
+  { path: '/building_cleaning_work', img: '/images/road6.png', title: 'النظافة العامة ورفع المخلفات', text: 'تنظيف الطرق والمداخل والأجزاء المشتركة ورفع المخلفات بمنظومة مستمرة.' },
+  { path: '/sewage_network_maintenance', img: '/images/Drainageandwatersupplynetworks.png', title: 'شبكات المياه والصرف والمرافق', text: 'صيانة شبكات التغذية والصرف والإنارة والمرافق الأساسية داخل المجتمعات.' },
+  { path: '/green_area_maintenance', img: '/images/GSM-MCTOPBWFEHBG.png', title: 'المساحات الخضراء والأشجار', text: 'صيانة المسطحات الخضراء والنجيل والأشجار والري لتحسين جودة المكان.' },
+  { path: '/security_and_guarding_work', img: '/images/SecurityandGuarding.png', title: 'الأمن والحراسة', text: 'تأمين المداخل والمواقع والمرافق مع خدمات الحماية والمرور والرقابة.' },
+  { path: '/building_facilities_maintenance', img: '/images/Roadandstreetmaintenance.png', title: 'مرافق العمارات والمباني', text: 'متابعة مرافق العمارات والممرات والبوابات ومعالجة الأعطال الطارئة.' },
+  { path: '/maintenance_of_electric_elevators', img: '/images/Elevatorandfacilitymaintenance.png', title: 'المصاعد والمعدات الحيوية', text: 'صيانة المصاعد الكهربائية والمعدات الحيوية وضمان جاهزيتها للتشغيل.' },
+  { path: '/equipment', img: '/images/road4.png', title: 'تأجير المعدات المملوكة', text: 'توفير معدات الشركة لدعم أعمال التنفيذ والتشغيل في المشروعات المختلفة.' },
+  { path: '/contracting_transport', img: '/images/imagesTameer.png', title: 'إدارة وتشغيل أسطول النقل', text: 'إدارة وتشغيل أتوبيسات النقل وخدمات نقل الركاب والبضائع والمهمات.' },
+].map((s, i) => ({ ...s, no: String(i + 1).padStart(2, '0') }));
+
+export const cities: Place[] = [
+  { name: 'مدينة الشروق', img: '/images/5-1.jpg' },
+  { name: 'مدينة برج العرب الجديدة', img: '/images/9-1.jpg' },
+  { name: 'مدينة القاهرة الجديدة', img: '/images/13-1.jpg' },
+  { name: 'مدينة 6 أكتوبر الجديدة', img: '/images/7-1.jpg' },
+  { name: 'مدينة حدائق أكتوبر', img: '/images/6-1.jpg' },
+  { name: 'مدينة بدر', img: '/images/11-1.jpg' },
+  { name: 'حدائق العاصمة', img: '/images/20-1.jpg' },
+  { name: 'مدينة العاشر من رمضان', img: '/images/8-1.jpg' },
+  { name: 'حدائق العاشر من رمضان', img: '/images/21-1.jpg' },
+  { name: 'مدينة 15 مايو', img: '/images/4-1.jpg' },
+  { name: 'مدينة العبور', img: '/images/1-1.jpg' },
+  { name: 'مدينة العبور الجديدة', img: '/images/14-1.jpg' },
+  { name: 'مدينة بني سويف الجديدة', img: '/images/city_beni_suef_new.png' },
+  { name: 'مدينة سوهاج الجديدة', img: '/images/15-1.jpg' },
+  { name: 'مدينة أخميم الجديدة', img: '/images/16-1.jpg' },
+  { name: 'مدينة المينا الجديدة', img: '/images/10-1.jpg' },
+  { name: 'مدينة أسيوط الجديدة', img: '/images/city_assiut_new.png' },
+  { name: 'مدينة ناصر الجديدة', img: '/images/city_naser_new.png' },
+  { name: 'مدينة قنا الجديدة', img: '/images/17-1.jpg' },
+  { name: 'مدينة غرب قنا', img: '/images/city_west_qena.png' },
+  { name: 'مدينة أسوان الجديدة', img: '/images/18-1.jpg' },
+  { name: 'مدينة السادات', img: '/images/city_sadat.jpg' },
+  { name: 'مدينة طيبة الجديدة', img: '/images/city_taiba_new.png' },
+  { name: 'مدينة النوبارية الجديدة', img: '/images/city_nobariya_new.png' },
+  { name: 'مدينة الفيوم الجديدة', img: '/images/city_fayoum_new.png' },
+];
+
+export const governorates: Place[] = [
+  { name: 'محافظة بورسعيد', img: '/images/gov_port_said.png' },
+  { name: 'محافظة الدقهلية', img: '/images/gov_dakahlia.png' },
+  { name: 'محافظة البحر الأحمر', img: '/images/gov_red_sea.jpg' },
+  { name: 'محافظة السويس', img: '/images/gov_suez.jpg' },
+  { name: 'محافظة أسوان', img: '/images/gov_aswan.jpg' },
+  { name: 'محافظة البحيرة', img: '/images/gov_beheira.png' },
+  { name: 'محافظة الغربية', img: '/images/gov_gharbia.jpg' },
+  { name: 'محافظة دمياط', img: '/images/22-1.jpg' },
+  { name: 'محافظة بني سويف', img: '/images/gov_beni_suef.gif' },
+  { name: 'محافظة كفر الشيخ', img: '/images/gov_kafr_sheikh.jpg' },
+  { name: 'محافظة القليوبية', img: '/images/gov_qalyubia.jpg' },
+  { name: 'محافظة سوهاج', img: '/images/gov_sohag.png' },
+  { name: 'محافظة الإسماعيلية', img: '/images/12-1.jpg' },
+  { name: 'محافظة المنوفية', img: '/images/gov_monufia.jpg' },
+  { name: 'محافظة قنا', img: '/images/gov_qena.jpg' },
+  { name: 'محافظة المنيا', img: '/images/23-1.jpg' },
+  { name: 'محافظة الفيوم', img: '/images/gov_fayoum.jpg' },
+  { name: 'محافظة جنوب سيناء', img: '/images/gov_south_sinai.png' },
+  { name: 'محافظة الشرقية', img: '/images/gov_sharqia.jpg' },
+  { name: 'محافظة مرسي مطروح', img: '/images/gov_matrouh.jpg' },
+  { name: 'محافظة أسيوط', img: '/images/gov_asyut.png' },
+  { name: 'محافظة الوادي الجديد', img: '/images/24-1.jpg' },
+  { name: 'محافظة القاهرة', img: '/images/gov_cairo.png' },
+  { name: 'محافظة الأقصر', img: '/images/25-1.jpg' },
+];

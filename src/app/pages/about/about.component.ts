@@ -12,6 +12,15 @@ export class AboutComponent {
 
   private readonly seo = inject(SeoService);
 
+  scrollNext(event: Event): void {
+    event.preventDefault();
+    const target = document.getElementById('company-story');
+    if (!target) return;
+    const header = document.getElementById('mainHeader')?.offsetHeight ?? 0;
+    const top = target.getBoundingClientRect().top + window.scrollY - header - 12;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  }
+
   constructor() {
     this.seo.apply({
   "title": "عن التعمير | شركة التعمير لإدارة المرافق | Al Tameer",

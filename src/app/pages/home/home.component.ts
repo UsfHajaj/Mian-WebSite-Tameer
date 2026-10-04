@@ -1,17 +1,26 @@
-import { Component, afterNextRender, ViewEncapsulation, inject } from '@angular/core';
+import { Component, DestroyRef, ElementRef, afterNextRender, ViewEncapsulation, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../core/seo.service';
+import { initScrollFx } from '../../core/scroll-fx';
+import { ShareholdersComponent } from '../../shared/shareholders/shareholders.component';
+import { cities, governorates, homeServices } from './home.data';
 import { initHomeMotion } from './home.motion';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, ShareholdersComponent],
   templateUrl: './home.component.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrl: './home.css',
+  styleUrls: ['./home.css', './home-modern.css'],
 })
 export class HomeComponent {
   private readonly seo = inject(SeoService);
+  private readonly host = inject(ElementRef<HTMLElement>).nativeElement;
+  private readonly destroyRef = inject(DestroyRef);
+
+  readonly services = homeServices;
+  readonly cities = cities;
+  readonly governorates = governorates;
 
   constructor() {
     this.seo.apply({
@@ -25,6 +34,9 @@ export class HomeComponent {
   "crumb": "الرئيسية",
   "robots": "index, follow, max-image-preview:large"
 });
-    afterNextRender(() => initHomeMotion());
+    afterNextRender(() => {
+      initHomeMotion();
+      this.destroyRef.onDestroy(initScrollFx(this.host));
+    });
   }
 }

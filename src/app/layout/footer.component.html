@@ -1,15 +1,35 @@
-<footer class="site-footer">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-3 col-md-6">
-        <img loading="lazy" src="/images/company-logo-header.jpeg" alt="شعار التعمير" style="max-width:80px; border-radius:8px; margin-bottom:16px; display:block;">
-        <h5>التعمير لإدارة المرافق</h5>
-        <p><i class="fas fa-map-marker-alt me-2" style="color:var(--accent)"></i> القاهرة - مدينة بدر - الحي الأول<br>المجاورة الثالثة - عمارة 10</p>
-        <p><i class="fas fa-envelope me-2" style="color:var(--accent)"></i> <a href="mailto:Tammer_facility&#64;mhud.gov.eg" style="display:inline">Tammer_facility&#64;mhud.gov.eg</a></p>
-        <p><i class="fas fa-phone me-2" style="color:var(--accent)"></i> <span dir="ltr">+0228608414</span></p>
-      </div>
+<div class="ft" role="contentinfo">
+  <div class="ft__main">
+    <div class="mx-wrap ft__grid">
 
-      <div class="col-lg-3 col-md-6">
+      <!-- brand + contact -->
+      <section class="ft__brand" aria-label="التعمير لإدارة المرافق">
+        <a routerLink="/" class="ft__logo" aria-label="الرئيسية">
+          <img loading="lazy" src="/images/icon.png" alt="التعمير لإدارة المرافق" height="64">
+        </a>
+        <p class="ft__about">
+          شركة مساهمة مصرية تابعة لوزارة الإسكان والمرافق والمجتمعات العمرانية، متخصصة في إدارة وتشغيل
+          وصيانة المشروعات السكنية بالمدن الجديدة والمحافظات.
+        </p>
+
+        <ul class="ft__contact">
+          <li>
+            <span class="ft__ic"><i class="fas fa-map-marker-alt"></i></span>
+            <span>القاهرة - مدينة بدر - الحي الأول<br>المجاورة الثالثة - عمارة 10</span>
+          </li>
+          <li>
+            <span class="ft__ic"><i class="fas fa-envelope"></i></span>
+            <a href="mailto:Tammer_facility&#64;mhud.gov.eg" dir="ltr">Tammer_facility&#64;mhud.gov.eg</a>
+          </li>
+          <li>
+            <span class="ft__ic"><i class="fas fa-phone"></i></span>
+            <a href="tel:+0228608414" dir="ltr">+0228608414</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- quick links -->
+      <nav class="ft__col" aria-label="روابط سريعة">
         <h5>روابط سريعة</h5>
         <a routerLink="/">الرئيسية</a>
         <a routerLink="/about">عن الشركة</a>
@@ -19,24 +39,37 @@
         <a routerLink="/previous_works">سابقة الأعمال</a>
         <a routerLink="/careers">الوظائف المتاحة</a>
         <a routerLink="/communication-complaints">التواصل والشكاوى</a>
-      </div>
+      </nav>
 
-      <div class="col-lg-3 col-md-6">
+      <!-- services -->
+      <nav class="ft__col" aria-label="الخدمات">
         <h5>الخدمات</h5>
         <a routerLink="/contracting">أعمال المقاولات</a>
         <a routerLink="/contracting_transport">إدارة وتشغيل أسطول النقل</a>
         <a routerLink="/equipment">المعدات المملوكة</a>
         <a routerLink="/real_estate_development">التطوير العقاري</a>
-      </div>
+        <a routerLink="/services" class="ft__more">جميع الخدمات <i class="fas fa-arrow-left"></i></a>
+      </nav>
 
-      <div class="col-lg-3 col-md-6">
+      <!-- map -->
+      <section class="ft__map" aria-label="موقعنا">
         <h5>موقعنا</h5>
-        <iframe src="https://www.google.com/maps?q=%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%8A%D8%B1+%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9+%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D9%81%D9%82,+4PH9%2BH9W,+Badr,+Cairo+Governorate+4951204&output=embed" title="موقع شركة التعمير لإدارة المرافق" loading="lazy"></iframe>
-      </div>
+        <div class="ft__map-frame">
+          <iframe src="https://www.google.com/maps?q=%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%8A%D8%B1+%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9+%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D9%81%D9%82,+4PH9%2BH9W,+Badr,+Cairo+Governorate+4951204&output=embed" title="موقع شركة التعمير لإدارة المرافق" loading="lazy"></iframe>
+        </div>
+      </section>
     </div>
   </div>
-  <div class="footer-bar">
-    &copy; 2025&ndash;2026 جميع الحقوق محفوظة &mdash; <strong>التعمير لإدارة المرافق</strong>
-    &nbsp;|&nbsp; قطاع تكنولوجيا المعلومات
+
+  <div class="ft__bar">
+    <div class="mx-wrap ft__bar-in">
+      <p>
+        &copy; 2025&ndash;2026 جميع الحقوق محفوظة &mdash; <strong>التعمير لإدارة المرافق</strong>
+        <span class="ft__sep">|</span> قطاع تكنولوجيا المعلومات
+      </p>
+      <button type="button" class="ft__top" (click)="toTop()" aria-label="العودة لأعلى الصفحة">
+        <span>للأعلى</span> <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
   </div>
-</footer>
+</div>

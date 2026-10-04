@@ -11,8 +11,8 @@
       الشركة الرائدة في إدارة و تشغيل المشروعات السكنية بالمدن الجديدة والمحافظات بعموم الجمهورية،.
     </p>
     <div class="hero__actions">
-      <a routerLink="/services" class="btn-fill"><i class="fas fa-tools"></i> خدماتنا</a>
-      <a routerLink="/about" class="btn-ghost"><i class="fas fa-building"></i> تعرف علينا</a>
+      <a routerLink="/services" class="mx-btn mx-btn--gold">خدماتنا <i class="fas fa-arrow-left"></i></a>
+      <a routerLink="/about" class="mx-btn mx-btn--glass">تعرف علينا <i class="fas fa-arrow-left"></i></a>
     </div>
   </div>
 
@@ -22,48 +22,31 @@
 </section>
 
 <!-- ════════════════════ STATS ════════════════════ -->
-<section class="stats" id="statsSection">
-  <div class="stats__panel reveal">
-    
-   
-    <article class="clock-stat">
-      <p class="clock-stat__eyebrow">إجمالي مواقع مشروعات التعمير بالجمهورية</p>
-      <div class="flip-clock" id="projectsClock" data-target="259" data-digits="3" data-duration="6500" aria-label="259 مشروعاً">
-        <div class="flip-clock__group" aria-hidden="true">
-          <div class="flip-digit"><span class="flip-digit__num">0</span></div>
-          <div class="flip-digit"><span class="flip-digit__num">0</span></div>
-          <div class="flip-digit"><span class="flip-digit__num">0</span></div>
-        </div>
-      </div>
-      <span class="clock-stat__unit"><i class="fas fa-city"></i> إجمالي عدد المشروعات</span>
-      <!-- <p class="clock-stat__words">مائتي مشروعاً</p> -->
-    </article>
-    <div class="stats__divider" aria-hidden="true"></div>
-    <article class="clock-stat">
-      <p class="clock-stat__eyebrow">عدد المشروعات الجاري بها الاعمال بالمدن </p>
-      <div class="flip-clock" id="citiesClock" data-target="103" data-digits="3" data-duration="6500" aria-label="103 مدينة">
-        <div class="flip-clock__group" aria-hidden="true">
-          <div class="flip-digit"><span class="flip-digit__num">0</span></div>
-          <div class="flip-digit"><span class="flip-digit__num">0</span></div>
-          <div class="flip-digit"><span class="flip-digit__num">0</span></div>
-        </div>
-      </div>
-      <span class="clock-stat__unit"><i class="fas fa-map-marked-alt"></i> إجمالي عدد المشروعات</span>
-        <!-- <p class="clock-stat__words">مائة وثلاثة مدينة</p> -->
+<section class="hm-stats" id="statsSection" aria-label="أرقام المشروعات">
+  <div class="mx-wrap">
+    <div class="hm-stats__grid" data-reveal>
+      <article class="hm-stat" data-spot>
+        <i class="fas fa-city hm-stat__mark" aria-hidden="true"></i>
+        <span class="hm-stat__icon"><i class="fas fa-city"></i></span>
+        <strong class="hm-stat__num" data-count="259" data-count-repeat data-duration="1200">259</strong>
+        <b>إجمالي مواقع مشروعات التعمير بالجمهورية</b>
+        <small>إجمالي عدد المشروعات</small>
       </article>
-    <div class="stats__divider" aria-hidden="true"></div>
-    <article class="clock-stat">
-      <p class="clock-stat__eyebrow">عدد المشروعات الجاري بها الاعمال بالمحافظات </p>
-      <div class="flip-clock" id="govsClock" data-target="156" data-digits="3" data-duration="6500" aria-label="156 محافظة">
-        <div class="flip-clock__group" aria-hidden="true">
-          <div class="flip-digit"><span class="flip-digit__num">0</span></div>
-          <div class="flip-digit"><span class="flip-digit__num">0</span></div>
-          <div class="flip-digit"><span class="flip-digit__num">0</span></div>
-        </div>
-      </div>
-      <span class="clock-stat__unit"><i class="fas fa-map"></i> إجمالي عدد المشروعات</span>
-      <!-- <p class="clock-stat__words">مائة وستة وخمسون محافظة</p> -->
-    </article>
+      <article class="hm-stat" data-spot>
+        <i class="fas fa-map-marked-alt hm-stat__mark" aria-hidden="true"></i>
+        <span class="hm-stat__icon"><i class="fas fa-map-marked-alt"></i></span>
+        <strong class="hm-stat__num" data-count="103" data-count-repeat data-duration="1200">103</strong>
+        <b>عدد المشروعات الجاري بها الأعمال بالمدن</b>
+        <small>إجمالي عدد المشروعات</small>
+      </article>
+      <article class="hm-stat" data-spot>
+        <i class="fas fa-map hm-stat__mark" aria-hidden="true"></i>
+        <span class="hm-stat__icon"><i class="fas fa-map"></i></span>
+        <strong class="hm-stat__num" data-count="156" data-count-repeat data-duration="1200">156</strong>
+        <b>عدد المشروعات الجاري بها الأعمال بالمحافظات</b>
+        <small>إجمالي عدد المشروعات</small>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -122,248 +105,172 @@
 </section>
 
 <!-- ════════════════════ MISSION ════════════════════ -->
-<section class="block" id="missionSection">
-  <div class="mission reveal">
-    <!-- يمين: الصورة + لوجو الوزارة -->
-    <div class="mission__media reveal-left">
-      <!-- <div class="mission__logo-card">
-        <img loading="lazy" src="/images/logo-ministry-clear.png" alt="وزارة الإسكان والمرافق والمجتمعات العمرانية">
-      </div> -->
-      <img src="/images/socialhousing_high.jpg" alt="مشروعات سكنية" class="mission__shot">
-      <div class="mission__badge">خبرة ممتدة في مجال ادارة المرافق </div>
+<section class="hm-mission mx-sec mx-light" id="missionSection">
+  <div class="mx-wrap hm-mission__grid">
+    <div class="hm-mission__media" data-reveal>
+      <img src="/images/socialhousing_high.jpg" alt="مشروعات سكنية" loading="lazy">
+      <span class="hm-mission__badge">خبرة ممتدة في إدارة المرافق</span>
     </div>
-
-    <!-- شمال: الكلام -->
-    <div class="mission__copy">
-      <span class="mission__eyebrow">رسالتنا</span>
-      <h2>نحافظ على جودة الحياة في المدن الجديدة.</h2>
+    <div class="hm-mission__copy" data-reveal style="--d:2">
+      <span class="mx-eyebrow">رسالتنا</span>
+      <h2 class="mx-title">نحافظ على جودة الحياة في المدن الجديدة.</h2>
       <p>
-        التعمير لإدارة المرافق شركة مساهمة مصرية
-        تملكها وزارة الإسكان ،<br> وتهدف إلى الحفاظ على الثروة العقارية بالمدن الجديدة، وتحقيق
-        منظومة خدمات صيانة متكاملة للمشروعات السكنية على أعلى مستوى. يرأس مجلس إدارتها الدكتور
-        حسن الشوربجي .
+        التعمير لإدارة المرافق شركة مساهمة مصرية تملكها وزارة الإسكان، وتهدف إلى الحفاظ على الثروة العقارية بالمدن الجديدة، وتحقيق منظومة خدمات صيانة متكاملة للمشروعات السكنية على أعلى مستوى. يرأس مجلس إدارتها الدكتور حسن الشوربجي.
       </p>
       <p>
-        نعمل على إدارة مشروعات الإسكان الاجتماعي، دار مصر، سكن مصر، وعمارات جنة — مع الالتزام
-        بأعلى معايير الجودة والاستدامة البيئية.
+        نعمل على إدارة مشروعات الإسكان الاجتماعي، دار مصر، سكن مصر، وعمارات جنة، مع الالتزام بأعلى معايير الجودة والاستدامة البيئية.
       </p>
-      <a routerLink="/about" class="btn-fill mission__cta">
-        المزيد عن الشركة <i class="fas fa-arrow-left"></i>
-      </a>
+      <a routerLink="/about" class="mx-btn mx-btn--gold">المزيد عن الشركة <i class="fas fa-arrow-left"></i></a>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════ SERVICES ════════════════════ -->
-<section class="block" id="servicesSection" style="padding-top:0">
-  <div class="services-block services-block--compact">
-    <div class="services-intro services-intro--compact reveal">
-      <div class="services-intro__media">
-        <img loading="lazy" src="/images/Gemini_Generated_Image_7dmd5c7dmd5c7dmd.jpg" alt="خدماتنا المتخصصة">
-      </div>
-      <div class="services-intro__overlay" aria-hidden="true"></div>
-      <div class="services-intro__copy">
-        <span class="services-intro__eyebrow">خدماتنا</span>
-        <h2>مجالات عمل الشركة</h2>
-        <p>
-          تدير الشركة مشروعات الإسكان الاجتماعي والمدن الجديدة وتغطي خدمات الصيانة والنظافة والزراعة
-          والأمن والإنارة والمرافق والمرور وتطوير الأصول العقارية وفق أعلى معايير الجودة.
-        </p>
-        <a routerLink="/services" class="btn-fill services-intro__cta">
-          استكشف جميع الخدمات <i class="fas fa-arrow-left"></i>
-        </a>
-      </div>
-    </div>
+<section class="hm-services mx-sec mx-light" aria-label="خدماتنا">
+  <div class="mx-wrap">
+    <header class="mx-head mx-head--center" data-reveal>
+      <span class="mx-eyebrow">خدماتنا</span>
+      <h2 class="mx-title">مجالات عمل الشركة</h2>
+      <p class="mx-lead">
+        تدير الشركة مشروعات الإسكان الاجتماعي والمدن الجديدة وتغطي خدمات الصيانة والنظافة والزراعة والأمن
+        والإنارة والمرافق والمرور وتطوير الأصول العقارية وفق أعلى معايير الجودة.
+      </p>
+    </header>
 
-    <div class="service-mini-grid">
-      <a class="service-mini-card reveal" routerLink="/project"><div class="service-mini-card__media"><img loading="lazy" src="/images/Gemini_Generated_Image_7dmd5c7dmd5c7dmd.jpg" alt="إدارة وتشغيل المشروعات السكنية"></div><div class="service-mini-card__body"><h3>إدارة وتشغيل وصيانة المشروعات السكنية</h3><p>تشغيل وصيانة المجتمعات السكنية ومتابعة المرافق والخدمات اليومية بكفاءة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" routerLink="/green_area_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/image27-e1627925268524-768x901.jpg" alt="الحدائق والنوادي"></div><div class="service-mini-card__body"><h3>إدارة الحدائق والنوادي</h3><p>العناية بالحدائق والنوادي والمساحات الرياضية وتحسين البيئة المحيطة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" routerLink="/building_cleaning_work"><div class="service-mini-card__media"><img loading="lazy" src="/images/road6.png" alt="النظافة العامة"></div><div class="service-mini-card__body"><h3>النظافة العامة ورفع المخلفات</h3><p>تنظيف الطرق والمداخل والأجزاء المشتركة ورفع المخلفات بمنظومة مستمرة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" routerLink="/sewage_network_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/Drainageandwatersupplynetworks.png" alt="شبكات المياه والصرف والمرافق"></div><div class="service-mini-card__body"><h3>شبكات المياه والصرف والمرافق</h3><p>صيانة شبكات التغذية والصرف والإنارة والمرافق الأساسية داخل المجتمعات.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" routerLink="/green_area_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/GSM-MCTOPBWFEHBG.png" alt="المساحات الخضراء والأشجار"></div><div class="service-mini-card__body"><h3>المساحات الخضراء والأشجار</h3><p>صيانة المسطحات الخضراء والنجيل والأشجار والري لتحسين جودة المكان.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" routerLink="/security_and_guarding_work"><div class="service-mini-card__media"><img loading="lazy" src="/images/SecurityandGuarding.png" alt="الأمن والحراسة"></div><div class="service-mini-card__body"><h3>الأمن والحراسة</h3><p>تأمين المداخل والمواقع والمرافق مع خدمات الحماية والمرور والرقابة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" routerLink="/building_facilities_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/Roadandstreetmaintenance.png" alt="مرافق العمارات والمباني"></div><div class="service-mini-card__body"><h3>مرافق العمارات والمباني</h3><p>متابعة مرافق العمارات والممرات والبوابات ومعالجة الأعطال الطارئة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" routerLink="/maintenance_of_electric_elevators"><div class="service-mini-card__media"><img loading="lazy" src="/images/Elevatorandfacilitymaintenance.png" alt="المصاعد والمعدات الحيوية"></div><div class="service-mini-card__body"><h3>المصاعد والمعدات الحيوية</h3><p>صيانة المصاعد الكهربائية والمعدات الحيوية وضمان جاهزيتها للتشغيل.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" routerLink="/equipment"><div class="service-mini-card__media"><img loading="lazy" src="/images/road4.png" alt="تأجير المعدات"></div><div class="service-mini-card__body"><h3>تأجير المعدات المملوكة</h3><p>توفير معدات الشركة لدعم أعمال التنفيذ والتشغيل في المشروعات المختلفة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" routerLink="/contracting_transport"><div class="service-mini-card__media"><img loading="lazy" src="/images/imagesTameer.png" alt="إدارة وتشغيل أسطول النقل"></div><div class="service-mini-card__body"><h3>إدارة وتشغيل أسطول النقل</h3><p>إدارة وتشغيل أتوبيسات النقل وخدمات نقل الركاب والبضائع والمهمات.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-    </div>
-    <div class="text-center mt-4 reveal">
-      <a routerLink="/services" class="btn-fill">استكشف جميع الخدمات <i class="fas fa-arrow-left"></i></a>
+    <div class="hm-bento">
+      @for (s of services; track s.no; let i = $index) {
+        <a class="hm-svc" [class.hm-svc--feature]="i === 0" [routerLink]="s.path" data-reveal [style.--d]="i % 4">
+          <img [src]="s.img" [alt]="s.title" loading="lazy">
+          <span class="hm-svc__no">{{ s.no }}</span>
+          <div class="hm-svc__body">
+            <h3>{{ s.title }}</h3>
+            <p>{{ s.text }}</p>
+          </div>
+          <span class="hm-svc__go" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
+        </a>
+      }
+      <a routerLink="/services" class="hm-svc-all" data-reveal style="--d:1">
+        <div>
+          <h3>استكشف جميع الخدمات</h3>
+          <p>أكثر من 10 مجالات تشغيل وصيانة متكاملة تحت إدارة واحدة.</p>
+        </div>
+        <span class="hm-svc-all__btn">كل الخدمات <i class="fas fa-arrow-left"></i></span>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════ BOARD ════════════════════ -->
-<section class="block">
-  <div class="board-panel reveal">
-    <div class="block__head">
-      <span class="block__eyebrow"> التعمير لإدارة المرافق</span>
-      <h2 class="block__title">قيادة الشركة</h2>
-    </div>
-    <div class="board-grid">
-      
-      <div class="board-card reveal d2">
-        <img loading="lazy" src="/images/eng_abdallah.png" alt="مهندس عبدالله رشدي" class="board-card__photo">
-        <p class="board-card__name">المحاسب / عبدالله رشدي</p>
-        <p class="board-card__role">العضو المنتدب للشئون المالية والإدارية</p>
-      </div>
-      <a routerLink="/chairman_message" class="board-card board-card--chair reveal d1">
-        <div class="board-card__frame">
-          <img loading="lazy" src="/images/dr_shorbagy.png" alt="الدكتور حسن الشوربجي رئيس مجلس إدارة التعمير" class="board-card__photo">
+<section class="hm-board mx-sec mx-light">
+  <div class="mx-wrap">
+    <header class="mx-head mx-head--center" data-reveal>
+      <span class="mx-eyebrow">التعمير لإدارة المرافق</span>
+      <h2 class="mx-title">قيادة الشركة</h2>
+    </header>
+
+    <div class="hm-board__grid">
+      <article class="hm-leader" data-reveal style="--d:2">
+        <div class="hm-leader__photo">
+          <img loading="lazy" src="/images/eng_abdallah.png" alt="المحاسب عبدالله رشدي">
         </div>
-        <p class="board-card__name">الدكتور / حسن الشوربجي</p>
-        <p class="board-card__role">رئيس مجلس الإدارة</p>
+        <div class="hm-leader__body">
+          <h3 class="hm-leader__name">المحاسب / عبدالله رشدي</h3>
+          <p class="hm-leader__role">العضو المنتدب للشئون المالية والإدارية</p>
+        </div>
+      </article>
+
+      <a routerLink="/chairman_message" class="hm-leader hm-leader--chair" data-reveal style="--d:1">
+        <div class="hm-leader__photo">
+          <img loading="lazy" src="/images/dr_shorbagy.png" alt="الدكتور حسن الشوربجي رئيس مجلس إدارة التعمير">
+        </div>
+        <div class="hm-leader__body">
+          <span class="hm-leader__badge">رئيس مجلس الإدارة</span>
+          <h3 class="hm-leader__name">الدكتور / حسن الشوربجي</h3>
+          <span class="hm-leader__link">كلمة رئيس مجلس الإدارة <i class="fas fa-arrow-left"></i></span>
+        </div>
       </a>
-      <div class="board-card reveal d3">
-        <img loading="lazy" src="/images/ceo.png" alt="المهندس صلاح مرسي" class="board-card__photo">
-        <p class="board-card__name">المهندس / صلاح حسن </p>
-        <p class="board-card__role">العضو المنتدب لشئون التنفيذ والتشغيل</p>
-      </div>
+
+      <article class="hm-leader" data-reveal style="--d:3">
+        <div class="hm-leader__photo">
+          <img loading="lazy" src="/images/ceo.png" alt="المهندس صلاح حسن">
+        </div>
+        <div class="hm-leader__body">
+          <h3 class="hm-leader__name">المهندس / صلاح حسن</h3>
+          <p class="hm-leader__role">العضو المنتدب لشئون التنفيذ والتشغيل</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="hm-board__more" data-reveal>
+      <a routerLink="/board" class="mx-btn mx-btn--gold">مجلس الإدارة <i class="fas fa-arrow-left"></i></a>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════ VISION ════════════════════ -->
-<section class="block" style="padding-top:0">
-  <div class="vision reveal">
-    <div>
-      <span class="block__eyebrow">رؤيتنا</span>
-      <p class="vision__quote">
-        أن نكون الشريك الرائد والموثوق في إدارة وتشغيل وتطوير <em>المرافق والأصول والمجتمعات والمنشآت</em>، محليًا وإقليميًا، من خلال حلول متكاملة وذكية ومستدامة، تواكب تطلعات المستقبل وترتقي بجودة الحياة وتعظم قيمة الأصول
-      </p>
-    </div>
-    <div class="vision__actions">
-      <a routerLink="/company_goals" class="btn-ghost">أهداف الشركة <i class="fas fa-arrow-left"></i></a>
-      <a routerLink="/chairman_message" class="btn-fill">كلمة رئيس مجلس الإدارة <i class="fas fa-quote-right"></i></a>
+<section class="hm-vision">
+  <div class="mx-wrap">
+    <div class="hm-vision__panel" data-reveal>
+      <div class="hm-vision__copy">
+        <span class="hm-vision__kicker">رؤيتنا</span>
+        <p>
+          أن نكون الشريك الرائد والموثوق في إدارة وتشغيل وتطوير <em>المرافق والأصول والمجتمعات والمنشآت</em>، محليًا وإقليميًا، من خلال حلول متكاملة وذكية ومستدامة، تواكب تطلعات المستقبل وترتقي بجودة الحياة وتعظم قيمة الأصول.
+        </p>
+      </div>
+      <div class="hm-vision__actions">
+        <a routerLink="/company_goals" class="hm-vision__btn">أهداف الشركة</a>
+        <a routerLink="/chairman_message" class="hm-vision__btn hm-vision__btn--gold">كلمة رئيس مجلس الإدارة</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════ PARTNERS ════════════════════ -->
-<section class="block" style="padding-top:0">
-  <div class="partners-panel reveal">
-    <div class="block__head">
-      <span class="block__eyebrow">شركاؤنا</span>
-      <h2 class="block__title">الجهات المساهمة</h2>
-    </div>
-    <div class="logos-grid">
-      <div class="logo-cell reveal d1">
-        <a href="https://reserve.newcities.gov.eg/default.aspx" target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" src="/images/logo2.png" alt="جهاز تنمية المدن الجديدة">
-        </a>
-       <p>هيئة المجتمعات  <br>العمرانية الجديدة</p>
-      </div>
-      <div class="logo-cell reveal d2">
-        <a href="https://www.shmff.gov.eg" target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" src="/images/logo3.png" alt="صندوق الإسكان الاجتماعي">
-        </a>
-        <p>صندوق الإسكان الاجتماعي<br> ودعم التمويل العقاري</p>
-      </div>
-      <div class="logo-cell reveal d3">
-        <a href="https://hcww.com.eg" target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" src="/images/logo4.png" alt="الشركة القابضة لمياه الشرب">
-        </a>
-        <p>الشركة القابضة  لمياه الشرب <br> والصرف الصحي</p>
-      </div>
-      <div class="logo-cell reveal d4">
-        <a href="https://www.acfm.com.eg/" target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" src="/images/logo5.png" alt="شركة المقاولون العرب">
-        </a>
-        <p>شركة المقاولون العرب <br> لإدارة المرافق</p>
-      </div>
-    </div>
-  </div>
-</section>
+<app-shareholders eyebrow="شركاؤنا" heading="الجهات المساهمة" />
 
 <!-- ════════════════════ CLIENTS ════════════════════ -->
-<section class="block" style="padding-top:0">
-  <div class="clients-panel reveal">
-    <div class="block__head">
-      <span class="block__eyebrow">نطاق العمل</span>
-      <h2 class="block__title">جهات تشاركنا الأعمال</h2>
-    </div>
+<section class="hm-coverage mx-sec mx-light">
+  <div class="mx-wrap">
+    <header class="mx-head mx-head--center" data-reveal>
+      <span class="mx-eyebrow">نطاق العمل</span>
+      <h2 class="mx-title">جهات تشاركنا <span class="mx-grad">الأعمال</span></h2>
+      <p class="mx-lead">تغطية واسعة على مستوى الجمهورية.</p>
+    </header>
+  </div>
 
-    <div class="clients-sep">
-      <span class="clients-sep__mark"><i class="fas fa-map-marked-alt"></i> تغطية واسعة على مستوى الجمهورية</span>
+  <div class="hm-coverage__row" data-reveal>
+    <div class="mx-wrap hm-coverage__label">
+      <span class="hm-coverage__count" data-count="25">25</span>
+      <h3><i class="fas fa-city"></i> المدن الجديدة التي جاري بها تنفيذ الأعمال والمشروعات</h3>
     </div>
-
-    <div class="clients-section">
-      <div class="clients-section-head">
-        <div class="clients-icon"><i class="fas fa-city"></i></div>
-        <h3>المدن الجديدة التي جاري بها تنفيذ الأعمال والمشروعات</h3>
-        <span class="clients-badge">25</span>
-      </div>
-      <div class="marquee" data-marquee>
-        <div class="marquee__track">
-          <div class="marquee__group">
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/5-1.jpg" alt="مدينة الشروق" loading="lazy"></div><p>مدينة الشروق</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/9-1.jpg" alt="مدينة برج العرب الجديدة" loading="lazy"></div><p>مدينة برج العرب الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/13-1.jpg" alt="مدينة القاهرة الجديدة" loading="lazy"></div><p>مدينة القاهرة الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/7-1.jpg" alt="مدينة 6 أكتوبر الجديدة" loading="lazy"></div><p>مدينة 6 أكتوبر الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/6-1.jpg" alt="مدينة حدائق أكتوبر" loading="lazy"></div><p>مدينة حدائق أكتوبر</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/11-1.jpg" alt="مدينة بدر" loading="lazy"></div><p>مدينة بدر</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/20-1.jpg" alt="حدائق العاصمة" loading="lazy"></div><p>حدائق العاصمة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/8-1.jpg" alt="مدينة العاشر من رمضان" loading="lazy"></div><p>مدينة العاشر من رمضان</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/21-1.jpg" alt="حدائق العاشر من رمضان" loading="lazy"></div><p>حدائق العاشر من رمضان</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/4-1.jpg" alt="مدينة 15 مايو" loading="lazy"></div><p>مدينة 15 مايو</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/1-1.jpg" alt="مدينة العبور" loading="lazy"></div><p>مدينة العبور</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/14-1.jpg" alt="مدينة العبور الجديدة" loading="lazy"></div><p>مدينة العبور الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/city_beni_suef_new.png" alt="مدينة بني سويف الجديدة" loading="lazy"></div><p>مدينة بني سويف الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/15-1.jpg" alt="مدينة سوهاج الجديدة" loading="lazy"></div><p>مدينة سوهاج الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/16-1.jpg" alt="مدينة أخميم الجديدة" loading="lazy"></div><p>مدينة أخميم الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/10-1.jpg" alt="مدينة المينا الجديدة" loading="lazy"></div><p>مدينة المينا الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/city_assiut_new.png" alt="مدينة أسيوط الجديدة" loading="lazy"></div><p>مدينة أسيوط الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/city_naser_new.png" alt="مدينة ناصر الجديدة" loading="lazy"></div><p>مدينة ناصر الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/17-1.jpg" alt="مدينة قنا الجديدة" loading="lazy"></div><p>مدينة قنا الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/city_west_qena.png" alt="مدينة غرب قنا" loading="lazy"></div><p>مدينة غرب قنا</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/18-1.jpg" alt="مدينة أسوان الجديدة" loading="lazy"></div><p>مدينة أسوان الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/city_sadat.jpg" alt="مدينة السادات" loading="lazy"></div><p>مدينة السادات</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/city_taiba_new.png" alt="مدينة طيبة الجديدة" loading="lazy"></div><p>مدينة طيبة الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/city_nobariya_new.png" alt="مدينة النوبارية الجديدة" loading="lazy"></div><p>مدينة النوبارية الجديدة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/city_fayoum_new.png" alt="مدينة الفيوم الجديدة" loading="lazy"></div><p>مدينة الفيوم الجديدة</p></div>
-          </div>
+    <div class="mx-marquee" data-mx-marquee style="--speed:90s">
+      <div class="mx-marquee__track">
+        <div class="mx-marquee__group">
+          @for (c of cities; track c.name) {
+            <div class="hm-place">
+              <span class="hm-place__img"><img [src]="c.img" [alt]="c.name" loading="lazy"></span>
+              <span class="hm-place__name">{{ c.name }}</span>
+            </div>
+          }
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="clients-divider">
-      <div class="clients-divider__icon"><i class="fas fa-exchange-alt"></i></div>
+  <div class="hm-coverage__row" data-reveal>
+    <div class="mx-wrap hm-coverage__label">
+      <span class="hm-coverage__count" data-count="24">24</span>
+      <h3><i class="fas fa-landmark"></i> المحافظات التي جاري بها تنفيذ الأعمال والمشروعات</h3>
     </div>
-
-    <div class="clients-section">
-      <div class="clients-section-head">
-        <div class="clients-icon"><i class="fas fa-landmark"></i></div>
-        <h3>المحافظات التي جاري بها تنفيذ الأعمال والمشروعات</h3>
-        <span class="clients-badge">24</span>
-      </div>
-      <div class="marquee marquee--rev" data-marquee>
-        <div class="marquee__track">
-          <div class="marquee__group">
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_port_said.png" alt="محافظة بورسعيد" loading="lazy"></div><p>محافظة بورسعيد</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_dakahlia.png" alt="محافظة الدقهلية" loading="lazy"></div><p>محافظة الدقهلية</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_red_sea.jpg" alt="محافظة البحر الأحمر" loading="lazy"></div><p>محافظة البحر الأحمر</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_suez.jpg" alt="محافظة السويس" loading="lazy"></div><p>محافظة السويس</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_aswan.jpg" alt="محافظة أسوان" loading="lazy"></div><p>محافظة أسوان</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_beheira.png" alt="محافظة البحيرة" loading="lazy"></div><p>محافظة البحيرة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_gharbia.jpg" alt="محافظة الغربية" loading="lazy"></div><p>محافظة الغربية</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/22-1.jpg" alt="محافظة دمياط" loading="lazy"></div><p>محافظة دمياط</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_beni_suef.gif" alt="محافظة بني سويف" loading="lazy"></div><p>محافظة بني سويف</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_kafr_sheikh.jpg" alt="محافظة كفر الشيخ" loading="lazy"></div><p>محافظة كفر الشيخ</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_qalyubia.jpg" alt="محافظة القليوبية" loading="lazy"></div><p>محافظة القليوبية</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_sohag.png" alt="محافظة سوهاج" loading="lazy"></div><p>محافظة سوهاج</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/12-1.jpg" alt="محافظة الإسماعيلية" loading="lazy"></div><p>محافظة الإسماعيلية</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_monufia.jpg" alt="محافظة المنوفية" loading="lazy"></div><p>محافظة المنوفية</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_qena.jpg" alt="محافظة قنا" loading="lazy"></div><p>محافظة قنا</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/23-1.jpg" alt="محافظة المنيا" loading="lazy"></div><p>محافظة المنيا</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_fayoum.jpg" alt="محافظة الفيوم" loading="lazy"></div><p>محافظة الفيوم</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_south_sinai.png" alt="محافظة جنوب سيناء" loading="lazy"></div><p>محافظة جنوب سيناء</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_sharqia.jpg" alt="محافظة الشرقية" loading="lazy"></div><p>محافظة الشرقية</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_matrouh.jpg" alt="محافظة مرسي مطروح" loading="lazy"></div><p>محافظة مرسي مطروح</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_asyut.png" alt="محافظة أسيوط" loading="lazy"></div><p>محافظة أسيوط</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/24-1.jpg" alt="محافظة الوادي الجديد" loading="lazy"></div><p>محافظة الوادي الجديد</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/gov_cairo.png" alt="محافظة القاهرة" loading="lazy"></div><p>محافظة القاهرة</p></div>
-            <div class="client-cell"><div class="client-cell__box"><img src="/images/25-1.jpg" alt="محافظة الأقصر" loading="lazy"></div><p>محافظة الأقصر</p></div>
-          </div>
+    <div class="mx-marquee mx-marquee--rev" data-mx-marquee style="--speed:90s">
+      <div class="mx-marquee__track">
+        <div class="mx-marquee__group">
+          @for (g of governorates; track g.name) {
+            <div class="hm-place">
+              <span class="hm-place__img"><img [src]="g.img" [alt]="g.name" loading="lazy"></span>
+              <span class="hm-place__name">{{ g.name }}</span>
+            </div>
+          }
         </div>
       </div>
     </div>

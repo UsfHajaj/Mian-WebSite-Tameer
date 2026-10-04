@@ -1,42 +1,66 @@
-<!-- PAGE HERO -->
-<div class="page-hero-inner">
-  <div class="page-hero-orb"></div>
-  <div class="container">
-    <div class="page-hero-badge"><i class="fas fa-tools"></i> الخدمات</div>
-    <h1 class="page-hero-title">خدماتنا المتخصصة</h1>
-    <p class="page-hero-sub">منظومة شاملة من الخدمات لإدارة المرافق في المدن الجديدة</p>
-  </div>
-</div>
-<div class="page-spacer"></div>
-
-<section class="content-pad">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow"><i class="fas fa-th-large"></i> نطاق أعمال الشركة</div>
-      <h2>الخدمات والأنشطة المتنوعة</h2>
-      <p>تتولى الشركة إدارة وتشغيل وصيانة المشروعات السكنية والحدائق والنوادي، مع تقديم خدمات النظافة والصيانة والزراعة والأمن والمرور وتطوير الأصول العقارية بتكامل كامل بما يتوافق مع غرضها المسجل.</p>
+<section class="sv-hero" aria-label="خدماتنا">
+  <img class="sv-hero__bg" src="/images/socialhousing_high.jpg" alt="">
+  <div class="sv-hero__shade" aria-hidden="true"></div>
+  <div class="sv-hero__content">
+    <span class="mx-eyebrow">الخدمات</span>
+    <h1>خدماتنا المتخصصة</h1>
+    <p>منظومة واحدة لإدارة وتشغيل وصيانة المشروعات السكنية والمرافق في المدن الجديدة والمحافظات.</p>
+    <div class="sv-hero__actions">
+      <a routerLink="/services" fragment="sv-list" class="mx-btn mx-btn--gold">استعرض الخدمات <i class="fas fa-arrow-down"></i></a>
+      <a routerLink="/communication-complaints" class="mx-btn mx-btn--glass">تواصل معنا <i class="fas fa-arrow-left"></i></a>
     </div>
+  </div>
+  <a routerLink="/services" fragment="sv-next" class="sv-hero__scroll" aria-label="انتقل للأسفل"><i class="fas fa-chevron-down"></i></a>
+</section>
 
-    <div class="service-mini-grid">
-      <a class="service-mini-card reveal" routerLink="/project"><div class="service-mini-card__media"><img loading="lazy" src="/images/Gemini_Generated_Image_7dmd5c7dmd5c7dmd.jpg" alt="إدارة وتشغيل المشروعات السكنية"></div><div class="service-mini-card__body"><h3>إدارة وتشغيل وصيانة المشروعات السكنية</h3><p>تشغيل وصيانة المجتمعات السكنية ومتابعة المرافق والخدمات اليومية بكفاءة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.04s" routerLink="/green_area_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/image27-e1627925268524-768x901.jpg" alt="الحدائق والنوادي"></div><div class="service-mini-card__body"><h3>إدارة الحدائق والنوادي</h3><p>العناية بالحدائق والنوادي والمساحات الرياضية وتحسين البيئة المحيطة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.08s" routerLink="/building_cleaning_work"><div class="service-mini-card__media"><img loading="lazy" src="/images/road6.png" alt="النظافة العامة"></div><div class="service-mini-card__body"><h3>النظافة العامة ورفع المخلفات</h3><p>تنظيف الطرق والمداخل والأجزاء المشتركة ورفع المخلفات بمنظومة مستمرة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.12s" routerLink="/sewage_network_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/Drainageandwatersupplynetworks.png" alt="شبكات المياه والصرف والمرافق"></div><div class="service-mini-card__body"><h3>شبكات المياه والصرف والمرافق</h3><p>صيانة شبكات التغذية والصرف والإنارة والمرافق الأساسية داخل المجتمعات.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.16s" routerLink="/green_area_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/GSM-MCTOPBWFEHBG.png" alt="المساحات الخضراء والأشجار"></div><div class="service-mini-card__body"><h3>المساحات الخضراء والأشجار</h3><p>صيانة المسطحات الخضراء والنجيل والأشجار والري لتحسين جودة المكان.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.2s" routerLink="/security_and_guarding_work"><div class="service-mini-card__media"><img loading="lazy" src="/images/SecurityandGuarding.png" alt="الأمن والحراسة"></div><div class="service-mini-card__body"><h3>الأمن والحراسة</h3><p>تأمين المداخل والمواقع والمرافق مع خدمات الحماية والمرور والرقابة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.24s" routerLink="/building_facilities_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/Roadandstreetmaintenance.png" alt="مرافق العمارات والمباني"></div><div class="service-mini-card__body"><h3>مرافق العمارات والمباني</h3><p>متابعة مرافق العمارات والممرات والبوابات ومعالجة الأعطال الطارئة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.28s" routerLink="/maintenance_of_electric_elevators"><div class="service-mini-card__media"><img loading="lazy" src="/images/Elevatorandfacilitymaintenance.png" alt="المصاعد والمعدات الحيوية"></div><div class="service-mini-card__body"><h3>المصاعد والمعدات الحيوية</h3><p>صيانة المصاعد الكهربائية والمعدات الحيوية وضمان جاهزيتها للتشغيل.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <!-- <a class="hub-card reveal" style="transition-delay:.32s" routerLink="/real_estate_development"><div class="hub-card__media"><img loading="lazy" src="/images/tameer1.png" alt="الأصول العقارية"></div><div class="hub-card__body"><h6>إدارة الأصول العقارية، البيع والشراء، والمحلات والوحدات</h6><span>خدمة أساسية</span></div></a>
-      <a class="hub-card reveal" style="transition-delay:.36s" routerLink="/real_estate_development"><div class="hub-card__media"><img loading="lazy" src="/images/road1.png" alt="التطوير العقاري"></div><div class="hub-card__body"><h6>الاستثمار والتطوير العقاري والتجاري</h6><span>خدمة أساسية</span></div></a>
-      <a class="hub-card reveal" style="transition-delay:.4s" routerLink="/contracting"><div class="hub-card__media"><img loading="lazy" src="/images/grid3.png" alt="المقاولات"></div><div class="hub-card__body"><h6>أعمال المقاولات والإشراف على تنفيذ المنشآت والمشروعات</h6><span>خدمة أساسية</span></div></a>
-      <a class="hub-card reveal" style="transition-delay:.44s" routerLink="/road_maintenance"><div class="hub-card__media"><img loading="lazy" src="/images/road1.png" alt="جمع ونقل المخلفات"></div><div class="hub-card__body"><h6>جمع ونقل المخلفات غير الخطرة وتشغيل محطات المرافق</h6><span>خدمة أساسية</span></div></a> -->
-      <a class="service-mini-card reveal" style="transition-delay:.32s" routerLink="/road_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/road1.png" alt="اعمال صيانه و النظافة العامه للطرق"></div><div class="service-mini-card__body"><h3>اعمال صيانه و النظافة العامه للطرق</h3><p>صيانة وإصلاح للطرق والأرصفة، مع النظافة ورفع المخلفات والتطهير.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.36s" routerLink="/administrative_building_cleaning"><div class="service-mini-card__media"><img loading="lazy" src="/images/ABCW-FOC.png" alt="أعمال نظافة المباني الإدارية"></div><div class="service-mini-card__body"><h3>أعمال نظافة المباني الإدارية</h3><p>تنظيف احترافي للمنشآت الإدارية والتجارية.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.4s" routerLink="/garden_lighting_maintenance"><div class="service-mini-card__media"><img loading="lazy" src="/images/GAFLM-MOGFLPRECIERDPBWSTS1.png" alt="صيانة إنارة الحدائق والأسوار"></div><div class="service-mini-card__body"><h3>صيانة إنارة الحدائق والأسوار</h3><p>صيانة منظومة الإنارة للفضاءات الخارجية.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.44s" routerLink="/real_estate_development"><div class="service-mini-card__media"><img loading="lazy" src="/images/tatweerAqary1.png" alt="التطوير العقاري"></div><div class="service-mini-card__body"><h3>التطوير العقاري</h3><p>إدارة الأصول العقارية وتطوير المشاريع التجارية والسكنية.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.56s" routerLink="/contracting"><div class="service-mini-card__media"><img loading="lazy" src="/images/images2.png" alt="أعمال المقاولات"></div><div class="service-mini-card__body"><h3>أعمال المقاولات</h3><p>الإشراف على تنفيذ المنشآت والمشروعات والتجهيزات وفق الجودة والمعايير الفنية.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.6s" routerLink="/equipment"><div class="service-mini-card__media"><img loading="lazy" src="/images/road4.png" alt="تأجير المعدات"></div><div class="service-mini-card__body"><h3>تأجير المعدات المملوكة</h3><p>توفير معدات الشركة لدعم أعمال التنفيذ والتشغيل في المشروعات المختلفة.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
-      <a class="service-mini-card reveal" style="transition-delay:.52s" routerLink="/contracting_transport"><div class="service-mini-card__media"><img loading="lazy" src="/images/imagesTameer.png" alt="إدارة وتشغيل أسطول النقل"></div><div class="service-mini-card__body"><h3>إدارة وتشغيل أسطول النقل</h3><p>إدارة وتشغيل أتوبيسات النقل وخدمات نقل الركاب والبضائع والمهمات.</p><span class="service-mini-card__arrow">التفاصيل <i class="fas fa-arrow-left"></i></span></div></a>
+<section class="sv-pillars mx-sec mx-light" id="sv-next">
+  <div class="mx-wrap">
+    <header class="mx-head mx-split-head">
+      <div data-reveal>
+        <span class="mx-eyebrow">نطاق أعمال الشركة</span>
+        <h2 class="mx-title">الخدمات والأنشطة <span class="mx-grad">المتنوعة</span></h2>
+      </div>
+      <p class="mx-lead" data-reveal style="--d:2">
+        تتولى الشركة إدارة وتشغيل وصيانة المشروعات السكنية والحدائق والنوادي، مع خدمات النظافة والزراعة والأمن والمرور وتطوير الأصول العقارية بتكامل كامل.
+      </p>
+    </header>
+
+    <div class="sv-pillars__grid">
+      @for (p of pillars; track p.title; let i = $index) {
+        <article class="sv-pillar" data-reveal [style.--d]="i + 1">
+          <span class="sv-pillar__icon"><i [class]="'fas ' + p.icon"></i></span>
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.text }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="sv-list mx-sec" id="sv-list">
+  <div class="mx-wrap">
+    <header class="mx-head mx-head--center" data-reveal>
+      <span class="mx-eyebrow">{{ services.length }} مجال</span>
+      <h2 class="mx-title">كل خدمات التشغيل والصيانة</h2>
+    </header>
+
+    <div class="sv-grid">
+      @for (s of services; track s.no; let i = $index) {
+        <a class="sv-card" [class.sv-card--feature]="i === 0" [routerLink]="s.path" data-reveal [style.--d]="i % 4">
+          <img [src]="s.img" [alt]="s.title" loading="lazy">
+          <span class="sv-card__no">{{ s.no }}</span>
+          <div class="sv-card__body">
+            <h3>{{ s.title }}</h3>
+            <p>{{ s.text }}</p>
+          </div>
+          <span class="sv-card__go" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
+        </a>
+      }
+      <a routerLink="/communication-complaints" class="sv-ask" data-reveal style="--d:1">
+        <h3>طلب تنفيذ الخدمة</h3>
+        <p>يسعدنا تواصلكم لتحديد نطاق الأعمال وترتيبات التنفيذ.</p>
+        <span>تواصل معنا <i class="fas fa-arrow-left"></i></span>
+      </a>
     </div>
   </div>
 </section>

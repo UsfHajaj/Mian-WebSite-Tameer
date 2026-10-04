@@ -28,7 +28,7 @@ function initOrgChart() {
     { id: 'board', parentId: null, name: 'مجلس إدارة شركة التعمير لإدارة المرافق', tone: 'board' },
 
     { id: 'md-ops', parentId: 'board', name: 'العضو المنتدب لشؤون التنفيذ والتشغيل', tone: 'md' },
-    { id: 'chair', parentId: 'board', name: 'رئيس مجلس الإدارة', note: '(غير تنفيذي)', tone: 'chair' },
+    { id: 'chair', parentId: 'board', name: 'رئيس مجلس الإدارة', note: '', tone: 'chair' },
     { id: 'md-fin', parentId: 'board', name: 'العضو المنتدب للشؤون المالية والإدارية', tone: 'md' },
 
     {

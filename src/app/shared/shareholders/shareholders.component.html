@@ -1,0 +1,19 @@
+<section class="sh-owners">
+  <div class="container">
+    <div class="sh-owners__head" data-reveal>
+      <div class="sh-owners__eyebrow"><i class="fas fa-chart-pie"></i> {{ eyebrow() }}</div>
+      <h2>{{ heading() }}</h2>
+      <p>{{ lead() }}</p>
+    </div>
+
+    <div class="sh-rise">
+      @for (o of owners; track o.name; let i = $index) {
+        <article class="sh-rise__card sh-rise__card--{{ o.size }}" data-reveal [style.--d]="i + 1">
+          <div class="sh-rise__pct">{{ o.pct }}</div>
+          <h3>{{ o.name }}</h3>
+          <div class="sh-rise__logo"><img [src]="o.logo" [alt]="'شعار ' + o.name" loading="lazy"></div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
