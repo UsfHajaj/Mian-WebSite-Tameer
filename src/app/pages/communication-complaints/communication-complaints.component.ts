@@ -5,6 +5,7 @@ import { SeoService } from '../../core/seo.service';
   selector: 'app-communication-complaints',
   imports: [],
   templateUrl: './communication-complaints.component.html',
+  styleUrl: './communication-complaints.component.css',
 })
 export class CommunicationComplaintsComponent {
   private readonly seo = inject(SeoService);
@@ -22,14 +23,38 @@ export class CommunicationComplaintsComponent {
   "robots": "index, follow, max-image-preview:large"
 });
   }
+  scrollNext(event: Event): void {
+    event.preventDefault();
+    const target = document.getElementById('service-selection');
+    if (!target) return;
+    const header = document.getElementById('mainHeader')?.offsetHeight ?? 0;
+    const top = target.getBoundingClientRect().top + window.scrollY - header - 12;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  }
+
+  tilt(event: MouseEvent): void {
+    const el = event.currentTarget;
+    if (!(el instanceof HTMLElement)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const box = el.getBoundingClientRect();
+    const x = (event.clientX - box.left) / box.width - 0.5;
+    const y = (event.clientY - box.top) / box.height - 0.5;
+    el.style.transform = `rotateX(${(-y * 14).toFixed(2)}deg) rotateY(${(x * 16).toFixed(2)}deg) translateY(-6px)`;
+  }
+
+  untilt(event: MouseEvent): void {
+    const el = event.currentTarget;
+    if (el instanceof HTMLElement) el.style.transform = '';
+  }
+
   showService(type: 'contact' | 'complaint'): void {
     document.getElementById('service-selection')?.classList.add('d-none');
     document.getElementById('contact-service')?.classList.add('d-none');
     document.getElementById('complaint-service')?.classList.add('d-none');
     document.getElementById(type === 'contact' ? 'contact-service' : 'complaint-service')?.classList.remove('d-none');
-    const pad = document.querySelector('.content-pad');
+    const pad = document.getElementById(type === 'contact' ? 'contact-service' : 'complaint-service');
     if (pad instanceof HTMLElement) {
-      window.scrollTo({ top: pad.offsetTop - 80, behavior: 'smooth' });
+      window.scrollTo({ top: pad.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
     }
   }
 

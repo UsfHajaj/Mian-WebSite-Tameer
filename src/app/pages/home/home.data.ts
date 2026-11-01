@@ -11,7 +11,7 @@ export const homeServices = [
   { path: '/green_area_maintenance', img: '/images/GSM-MCTOPBWFEHBG.png', title: 'المساحات الخضراء والأشجار', text: 'صيانة المسطحات الخضراء والنجيل والأشجار والري لتحسين جودة المكان.' },
   { path: '/security_and_guarding_work', img: '/images/SecurityandGuarding.png', title: 'الأمن والحراسة', text: 'تأمين المداخل والمواقع والمرافق مع خدمات الحماية والمرور والرقابة.' },
   { path: '/building_facilities_maintenance', img: '/images/Roadandstreetmaintenance.png', title: 'مرافق العمارات والمباني', text: 'متابعة مرافق العمارات والممرات والبوابات ومعالجة الأعطال الطارئة.' },
-  { path: '/maintenance_of_electric_elevators', img: '/images/Elevatorandfacilitymaintenance.png', title: 'المصاعد والمعدات الحيوية', text: 'صيانة المصاعد الكهربائية والمعدات الحيوية وضمان جاهزيتها للتشغيل.' },
+  { path: '/real_estate_asset_management', img: '/images/TS1.jpeg', title: 'إدارة وتشغيل الأصول العقارية والمنشآت التجارية والإدارية', text: 'تشغيل وصيانة المنشآت التجارية والإدارية ومتابعة الأصول العقارية بأعلى معايير الجودة.' },
   { path: '/equipment', img: '/images/road4.png', title: 'تأجير المعدات المملوكة', text: 'توفير معدات الشركة لدعم أعمال التنفيذ والتشغيل في المشروعات المختلفة.' },
   { path: '/contracting_transport', img: '/images/imagesTameer.png', title: 'إدارة وتشغيل أسطول النقل', text: 'إدارة وتشغيل أتوبيسات النقل وخدمات نقل الركاب والبضائع والمهمات.' },
 ].map((s, i) => ({ ...s, no: String(i + 1).padStart(2, '0') }));

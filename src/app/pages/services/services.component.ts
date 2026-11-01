@@ -30,6 +30,7 @@ export class ServicesComponent {
     { path: '/security_and_guarding_work', img: '/images/SecurityandGuarding.png', title: 'الأمن والحراسة', text: 'تأمين المداخل والمواقع والمرافق مع خدمات الحماية والمرور والرقابة.' },
     { path: '/building_facilities_maintenance', img: '/images/Roadandstreetmaintenance.png', title: 'مرافق العمارات والمباني', text: 'متابعة مرافق العمارات والممرات والبوابات ومعالجة الأعطال الطارئة.' },
     { path: '/maintenance_of_electric_elevators', img: '/images/Elevatorandfacilitymaintenance.png', title: 'المصاعد والمعدات الحيوية', text: 'صيانة المصاعد الكهربائية والمعدات الحيوية وضمان جاهزيتها للتشغيل.' },
+    { path: '/real_estate_asset_management', img: '/images/TS1.jpeg', title: 'إدارة وتشغيل الأصول العقارية والمنشآت التجارية والإدارية', text: 'تشغيل وصيانة المنشآت التجارية والإدارية ومتابعة الأصول العقارية بأعلى معايير الجودة.' },
     { path: '/road_maintenance', img: '/images/road1.png', title: 'أعمال صيانة ونظافة الطرق', text: 'صيانة وإصلاح الطرق والأرصفة، مع النظافة ورفع المخلفات والتطهير.' },
     { path: '/administrative_building_cleaning', img: '/images/ABCW-FOC.png', title: 'نظافة المباني الإدارية', text: 'تنظيف احترافي للمنشآت الإدارية والتجارية.' },
     { path: '/garden_lighting_maintenance', img: '/images/GAFLM-MOGFLPRECIERDPBWSTS1.png', title: 'صيانة إنارة الحدائق والأسوار', text: 'صيانة منظومة الإنارة للفضاءات الخارجية.' },
@@ -39,11 +40,14 @@ export class ServicesComponent {
     { path: '/contracting_transport', img: '/images/imagesTameer.png', title: 'إدارة وتشغيل أسطول النقل', text: 'إدارة وتشغيل أتوبيسات النقل وخدمات نقل الركاب والبضائع والمهمات.' },
   ].map((s, i) => ({ ...s, no: String(i + 1).padStart(2, '0') }));
 
+  readonly leadServices = this.services.slice(0, -3);
+  readonly tailServices = this.services.slice(-3);
+
   constructor() {
     this.seo.apply({
       title: 'الخدمات - إدارة المرافق والصيانة | التعمير لإدارة المرافق',
-      description: 'خدمات التعمير لإدارة المرافق: صيانة الطرق، النظافة، الحراسة، شبكات الصرف، المساحات الخضراء، المصاعد الكهربائية وصيانة مرافق المباني.',
-      keywords: 'التعمير, إدارة المرافق, صيانة, المدن الجديدة, وزارة الإسكان, الإسكان الاجتماعي, دار مصر, إدارة مشاريع سكنية, تنظيف, حراسة, صيانة مصاعد, شبكات الصرف الصحي, المساحات الخضراء',
+      description: 'خدمات التعمير لإدارة المرافق: إدارة الأصول العقارية والمنشآت التجارية والإدارية، صيانة الطرق، النظافة، الحراسة، شبكات الصرف، المساحات الخضراء، والمصاعد الكهربائية.',
+      keywords: 'التعمير, إدارة المرافق, إدارة الأصول العقارية, تشغيل المنشآت التجارية, صيانة, المدن الجديدة, وزارة الإسكان, الإسكان الاجتماعي, دار مصر, تنظيف, حراسة, صيانة مصاعد, شبكات الصرف الصحي, المساحات الخضراء',
       path: '/services',
       image: 'https://tameer-facility.com/images/socialhousing_high.jpg',
       priority: '0.9',

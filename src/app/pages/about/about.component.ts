@@ -1,6 +1,6 @@
 import { Component, afterNextRender, inject } from '@angular/core';
 import { SeoService } from '../../core/seo.service';
-import { mountOrgChart } from './org-chart';
+import { loadOrgChart } from './org-chart';
 
 @Component({
   selector: 'app-about',
@@ -33,7 +33,7 @@ export class AboutComponent {
   "crumb": "نبذة عن الشركة",
   "robots": "index, follow, max-image-preview:large"
 });
-    afterNextRender(() => { void mountOrgChart().then((stop) => { this.stopChart = typeof stop === 'function' ? stop : undefined; }); });
+    afterNextRender(() => { void loadOrgChart().then((stop) => { this.stopChart = typeof stop === 'function' ? stop : undefined; }); });
   }
 
   ngOnDestroy(): void {

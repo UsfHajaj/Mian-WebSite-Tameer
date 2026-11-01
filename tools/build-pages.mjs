@@ -37,6 +37,7 @@ const priorities = {
   administrative_building_cleaning: ['0.7', 'weekly'],
   building_cleaning_work: ['0.7', 'weekly'],
   building_facilities_maintenance: ['0.7', 'weekly'],
+  real_estate_asset_management: ['0.8', 'weekly'],
   real_estate_development: ['0.7', 'weekly'],
 };
 

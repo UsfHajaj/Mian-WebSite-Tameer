@@ -22,6 +22,7 @@ export const serviceLinks: NavLink[] = [
   { path: '/garden_lighting_maintenance', label: 'صيانة إنارة الحدائق والأسوار' },
   { path: '/building_facilities_maintenance', label: 'صيانة مرافق العمارات' },
   { path: '/maintenance_of_electric_elevators', label: 'صيانة المصاعد الكهربائية' },
+  { path: '/real_estate_asset_management', label: 'إدارة وتشغيل الأصول العقارية والمنشآت التجارية والإدارية' },
   { path: '/real_estate_development', label: 'التطوير العقاري' },
   { path: '/contracting', label: 'أعمال المقاولات' },
   { path: '/contracting_transport', label: 'إدارة وتشغيل أسطول النقل' },

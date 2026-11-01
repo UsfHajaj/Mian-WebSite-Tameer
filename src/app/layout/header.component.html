@@ -23,7 +23,7 @@
           </li>
 
           <li class="nav-item dropdown" [class.is-open]="openMenu() === 'about'" [class.mobile-active]="openMenu() === 'about'">
-            <a class="nav-link dropdown-toggle" routerLink="/about" data-nav="about" [class.active]="groupActive(aboutPaths)" aria-haspopup="true" [attr.aria-expanded]="openMenu() === 'about'" (click)="onDropdown($event, 'about')">عن الشركة</a>
+            <a class="nav-link dropdown-toggle" href="/about" data-nav="about" [class.active]="groupActive(aboutPaths)" aria-haspopup="true" [attr.aria-expanded]="openMenu() === 'about'" (click)="onDropdown($event, 'about', '/about')">عن الشركة</a>
             <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
               <li><a class="dropdown-item" routerLink="/about" routerLinkActive="active">نبذة عن الشركة</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -34,8 +34,10 @@
           </li>
 
           <li class="nav-item dropdown" [class.is-open]="openMenu() === 'services'" [class.mobile-active]="openMenu() === 'services'">
-            <a class="nav-link dropdown-toggle" routerLink="/services" data-nav="services" [class.active]="groupActive(servicePaths)" aria-haspopup="true" [attr.aria-expanded]="openMenu() === 'services'" (click)="onDropdown($event, 'services')">الخدمات</a>
+            <a class="nav-link dropdown-toggle" href="/services" data-nav="services" [class.active]="groupActive(servicePaths)" aria-haspopup="true" [attr.aria-expanded]="openMenu() === 'services'" (click)="onDropdown($event, 'services', '/services')">الخدمات</a>
             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" routerLink="/services" routerLinkActive="active">الخدمات</a></li>
+              <li><hr class="dropdown-divider"></li>
               @for (link of serviceLinks; track link.path) {
                 <li><a class="dropdown-item" [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a></li>
               }
@@ -43,8 +45,10 @@
           </li>
 
           <li class="nav-item dropdown" [class.is-open]="openMenu() === 'projects'" [class.mobile-active]="openMenu() === 'projects'">
-            <a class="nav-link dropdown-toggle" routerLink="/project" data-nav="projects" [class.active]="groupActive(projectPaths)" aria-haspopup="true" [attr.aria-expanded]="openMenu() === 'projects'" (click)="onDropdown($event, 'projects')">المشروعات</a>
+            <a class="nav-link dropdown-toggle" href="/project" data-nav="projects" [class.active]="groupActive(projectPaths)" aria-haspopup="true" [attr.aria-expanded]="openMenu() === 'projects'" (click)="onDropdown($event, 'projects', '/project')">المشروعات</a>
             <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <li><a class="dropdown-item" routerLink="/project" routerLinkActive="active">المشروعات</a></li>
+              <li><hr class="dropdown-divider"></li>
               @for (link of projectLinks; track link.path) {
                 <li><a class="dropdown-item" [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a></li>
               }

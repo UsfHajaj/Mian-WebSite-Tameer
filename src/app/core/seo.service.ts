@@ -16,6 +16,8 @@ export interface PageSeo {
   changefreq: string;
   crumb: string;
   robots?: string;
+  /** When set, adds schema.org Service entity to JSON-LD */
+  serviceName?: string;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -45,12 +47,13 @@ export class SeoService {
     this.upsertProperty('og:description', description);
     this.upsertProperty('og:url', url);
     this.upsertProperty('og:image', image);
-    this.upsertProperty('og:image:alt', SITE_NAME);
+    this.upsertProperty('og:image:alt', page.crumb || page.title || SITE_NAME);
 
     this.upsertName('twitter:card', 'summary_large_image');
     this.upsertName('twitter:title', page.title);
     this.upsertName('twitter:description', description);
     this.upsertName('twitter:image', image);
+    this.upsertName('twitter:image:alt', page.crumb || page.title || SITE_NAME);
 
     this.setLink('canonical', 'canonical', url);
     this.setHeroPreload(page.path === '/');
@@ -94,68 +97,99 @@ export class SeoService {
   }
 
   private setJsonLd(page: PageSeo, url: string, image: string, description: string): void {
-    const crumbs = page.path === '/'
-      ? [{ name: 'الرئيسية', item: `${SITE_URL}/` }]
-      : [
+    const crumbList = page.serviceName
+      ? [
           { name: 'الرئيسية', item: `${SITE_URL}/` },
+          { name: 'الخدمات', item: `${SITE_URL}/services` },
           { name: page.crumb || page.title, item: url },
-        ];
+        ]
+      : page.path === '/'
+        ? [{ name: 'الرئيسية', item: `${SITE_URL}/` }]
+        : [
+            { name: 'الرئيسية', item: `${SITE_URL}/` },
+            { name: page.crumb || page.title, item: url },
+          ];
+
+    const webPage: Record<string, unknown> = {
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: page.title,
+      description,
+      inLanguage: 'ar',
+      isPartOf: { '@id': `${SITE_URL}/#website` },
+      about: { '@id': `${SITE_URL}/#organization` },
+      primaryImageOfPage: image,
+    };
+
+    const graphNodes: Record<string, unknown>[] = [
+      {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}/#organization`,
+        name: SITE_NAME,
+        alternateName: ['التعمير', 'شركة التعمير', 'Al Tameer', 'Al Tameer Facility Management'],
+        url: `${SITE_URL}/`,
+        logo: `${SITE_URL}/images/company-logo-header.jpeg`,
+        image,
+        email: 'Tammer_facility@mhud.gov.eg',
+        telephone: '+20228608414',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'الحي الأول، المجاورة الثالثة، عمارة 10',
+          addressLocality: 'مدينة بدر',
+          addressRegion: 'القاهرة',
+          addressCountry: 'EG',
+        },
+        parentOrganization: {
+          '@type': 'GovernmentOrganization',
+          name: 'وزارة الإسكان والمرافق والمجتمعات العمرانية',
+        },
+        areaServed: { '@type': 'Country', name: 'Egypt' },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+        inLanguage: 'ar',
+        publisher: { '@id': `${SITE_URL}/#organization` },
+      },
+    ];
+
+    if (page.serviceName) {
+      webPage['mainEntity'] = { '@id': `${url}#service` };
+      graphNodes.push({
+        '@type': 'Service',
+        '@id': `${url}#service`,
+        name: page.serviceName,
+        alternateName: page.crumb || page.serviceName,
+        description,
+        url,
+        image,
+        serviceType: page.serviceName,
+        provider: { '@id': `${SITE_URL}/#organization` },
+        areaServed: { '@type': 'Country', name: 'Egypt' },
+        availableChannel: {
+          '@type': 'ServiceChannel',
+          serviceUrl: `${SITE_URL}/communication-complaints`,
+        },
+      });
+    }
+
+    graphNodes.push(webPage);
+    graphNodes.push({
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbList.map((crumb, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: crumb.name,
+        item: crumb.item,
+      })),
+    });
 
     const graph = {
       '@context': 'https://schema.org',
-      '@graph': [
-        {
-          '@type': 'Organization',
-          '@id': `${SITE_URL}/#organization`,
-          name: SITE_NAME,
-          alternateName: ['التعمير', 'شركة التعمير', 'Al Tameer', 'Al Tameer Facility Management'],
-          url: `${SITE_URL}/`,
-          logo: `${SITE_URL}/images/company-logo-header.jpeg`,
-          image,
-          email: 'Tammer_facility@mhud.gov.eg',
-          telephone: '+20228608414',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'الحي الأول، المجاورة الثالثة، عمارة 10',
-            addressLocality: 'مدينة بدر',
-            addressRegion: 'القاهرة',
-            addressCountry: 'EG',
-          },
-          parentOrganization: {
-            '@type': 'GovernmentOrganization',
-            name: 'وزارة الإسكان والمرافق والمجتمعات العمرانية',
-          },
-          areaServed: { '@type': 'Country', name: 'Egypt' },
-        },
-        {
-          '@type': 'WebSite',
-          '@id': `${SITE_URL}/#website`,
-          name: SITE_NAME,
-          url: `${SITE_URL}/`,
-          inLanguage: 'ar',
-          publisher: { '@id': `${SITE_URL}/#organization` },
-        },
-        {
-          '@type': 'WebPage',
-          '@id': `${url}#webpage`,
-          url,
-          name: page.title,
-          description,
-          inLanguage: 'ar',
-          isPartOf: { '@id': `${SITE_URL}/#website` },
-          about: { '@id': `${SITE_URL}/#organization` },
-          primaryImageOfPage: image,
-        },
-        {
-          '@type': 'BreadcrumbList',
-          itemListElement: crumbs.map((crumb, index) => ({
-            '@type': 'ListItem',
-            position: index + 1,
-            name: crumb.name,
-            item: crumb.item,
-          })),
-        },
-      ],
+      '@graph': graphNodes,
     };
 
     let script = this.doc.getElementById('ld-json') as HTMLScriptElement | null;

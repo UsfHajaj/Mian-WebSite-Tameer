@@ -31,6 +31,7 @@ export const routes: Routes = [
       { path: 'project_social', loadComponent: () => import('./pages/project-social/project-social.component').then((m) => m.ProjectSocialComponent) },
       { path: 'project_t_square', loadComponent: () => import('./pages/project-t-square/project-t-square.component').then((m) => m.ProjectTSquareComponent) },
       { path: 'protocol-tameer-ahly-misr', loadComponent: () => import('./pages/protocol-tameer-ahly-misr/protocol-tameer-ahly-misr.component').then((m) => m.ProtocolTameerAhlyMisrComponent) },
+      { path: 'real_estate_asset_management', loadComponent: () => import('./pages/real-estate-asset-management/real-estate-asset-management.component').then((m) => m.RealEstateAssetManagementComponent) },
       { path: 'real_estate_development', loadComponent: () => import('./pages/real-estate-development/real-estate-development.component').then((m) => m.RealEstateDevelopmentComponent) },
       { path: 'road_maintenance', loadComponent: () => import('./pages/road-maintenance/road-maintenance.component').then((m) => m.RoadMaintenanceComponent) },
       { path: 'security_and_guarding_work', loadComponent: () => import('./pages/security-and-guarding-work/security-and-guarding-work.component').then((m) => m.SecurityAndGuardingWorkComponent) },

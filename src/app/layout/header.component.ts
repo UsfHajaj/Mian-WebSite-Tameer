@@ -28,16 +28,21 @@ export class HeaderComponent {
 
   toggleMenu(): void {
     this.menuOpen.update((open) => !open);
+    if (!this.menuOpen()) return;
+    if (this.groupActive(this.aboutPaths)) this.openMenu.set('about');
+    else if (this.groupActive(this.servicePaths)) this.openMenu.set('services');
+    else if (this.groupActive(this.projectPaths)) this.openMenu.set('projects');
   }
 
-  onDropdown(event: Event, id: string): void {
-    if (this.isDesktop()) {
-      this.openMenu.set(null);
-      return;
-    }
+  onDropdown(event: Event, id: string, path: string): void {
     event.preventDefault();
     event.stopPropagation();
-    this.openMenu.update((current) => (current === id ? null : id));
+    if (!this.isDesktop()) {
+      this.openMenu.update((current) => (current === id ? null : id));
+      return;
+    }
+    this.openMenu.set(null);
+    void this.router.navigateByUrl(path);
   }
 
   groupActive(paths: string[]): boolean {

@@ -45,7 +45,7 @@
     </header>
 
     <div class="sv-grid">
-      @for (s of services; track s.no; let i = $index) {
+      @for (s of leadServices; track s.no; let i = $index) {
         <a class="sv-card" [class.sv-card--feature]="i === 0" [routerLink]="s.path" data-reveal [style.--d]="i % 4">
           <img [src]="s.img" [alt]="s.title" loading="lazy">
           <span class="sv-card__no">{{ s.no }}</span>
@@ -56,11 +56,24 @@
           <span class="sv-card__go" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
         </a>
       }
-      <a routerLink="/communication-complaints" class="sv-ask" data-reveal style="--d:1">
-        <h3>طلب تنفيذ الخدمة</h3>
-        <p>يسعدنا تواصلكم لتحديد نطاق الأعمال وترتيبات التنفيذ.</p>
-        <span>تواصل معنا <i class="fas fa-arrow-left"></i></span>
-      </a>
+      <div class="sv-tail">
+        @for (s of tailServices; track s.no; let i = $index) {
+          <a class="sv-card" [routerLink]="s.path" data-reveal [style.--d]="i">
+            <img [src]="s.img" [alt]="s.title" loading="lazy">
+            <span class="sv-card__no">{{ s.no }}</span>
+            <div class="sv-card__body">
+              <h3>{{ s.title }}</h3>
+              <p>{{ s.text }}</p>
+            </div>
+            <span class="sv-card__go" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
+          </a>
+        }
+        <a routerLink="/communication-complaints" class="sv-ask" data-reveal style="--d:3">
+          <h3>طلب تنفيذ الخدمة</h3>
+          <p>يسعدنا تواصلكم لتحديد نطاق الأعمال وترتيبات التنفيذ.</p>
+          <span>تواصل معنا <i class="fas fa-arrow-left"></i></span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
