@@ -40,9 +40,6 @@ export class ServicesComponent {
     { path: '/contracting_transport', img: '/images/imagesTameer.png', title: 'إدارة وتشغيل أسطول النقل', text: 'إدارة وتشغيل أتوبيسات النقل وخدمات نقل الركاب والبضائع والمهمات.' },
   ].map((s, i) => ({ ...s, no: String(i + 1).padStart(2, '0') }));
 
-  readonly leadServices = this.services.slice(0, -3);
-  readonly tailServices = this.services.slice(-3);
-
   constructor() {
     this.seo.apply({
       title: 'الخدمات - إدارة المرافق والصيانة | التعمير لإدارة المرافق',

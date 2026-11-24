@@ -8,6 +8,19 @@ app-inner-layout {
   display: block;
 }
 
+app-inner-layout,
+app-services {
+  display: block;
+  overflow: visible;
+}
+
+app-footer {
+  position: relative;
+  z-index: 1;
+  display: block;
+  clear: both;
+}
+
 app-root > :not(router-outlet),
 app-inner-layout > :not(router-outlet) {
   display: block;
